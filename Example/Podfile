@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ne-ios-sdk-samples_Example' do
+  pod 'ne-ios-sdk-samples', :path => '../'
+
+  target 'ne-ios-sdk-samples_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+  end
+end
