@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ne-ios-sdk-samples'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'this is sample project.'
 
   s.homepage         = 'https://github.com/nest-egg/ne-ios-sdk-samples'
