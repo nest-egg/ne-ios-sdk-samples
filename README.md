@@ -22,7 +22,7 @@ pod 'ne-ios-sdk-samples'
 
 ## Author
 
-landland-company, wataru930@gmail.com
+nest-egg, xxxx@gmail.com
 
 ## License
 

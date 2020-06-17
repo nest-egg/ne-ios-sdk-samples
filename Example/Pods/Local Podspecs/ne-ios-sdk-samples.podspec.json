@@ -1,0 +1,22 @@
+{
+  "name": "ne-ios-sdk-samples",
+  "version": "0.1.0",
+  "summary": "A short description of ne-ios-sdk-samples.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/landland-company/ne-ios-sdk-samples",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "landland-company": "wataru930@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/landland-company/ne-ios-sdk-samples.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ne-ios-sdk-samples/Classes/**/*"
+}

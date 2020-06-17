@@ -1,0 +1,6 @@
+framework module ne_ios_sdk_samples {
+  umbrella header "ne-ios-sdk-samples-umbrella.h"
+
+  export *
+  module * { export * }
+}
