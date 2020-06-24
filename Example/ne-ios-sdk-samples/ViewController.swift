@@ -7,18 +7,35 @@
 //
 
 import UIKit
+import StepRule
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var todayStepsLabel: UILabel!
+    @IBOutlet weak var authButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        if HealthDataManager.shared.isAvailable() {
+            self.authButton.backgroundColor = .gray
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func tappedGetSteps() {
+        let calendar = Calendar.current
+        let date = Date()
+        // 昨日
+        guard let yesterday = calendar.date(byAdding: .day, value: -1, to: calendar.startOfDay(for: date)) else { return }
+        HealthDataManager.shared.queryStepCounts(start: yesterday, end: date) { (model, success) in
+            guard let steps = model.stepCount(at: date) else { return }
+            DispatchQueue.main.async {
+                self.todayStepsLabel.text = "今日の歩数: \(steps)歩"
+            }
+        }
     }
-
+    
+    @IBAction func tappedAuth() {
+        let stepRuleVC = StepRuleAuthRequestViewController.getViewController()
+        self.navigationController?.pushViewController(stepRuleVC, animated: true)
+    }
 }
-

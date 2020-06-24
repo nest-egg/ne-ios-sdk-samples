@@ -1,0 +1,11 @@
+framework module StepRule {
+  umbrella header "StepRule.h"
+
+  export *
+  module * { export * }
+}
+
+module StepRule.Swift {
+    header "StepRule-Swift.h"
+    requires objc
+}

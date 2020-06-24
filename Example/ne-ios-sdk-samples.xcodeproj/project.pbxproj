@@ -42,11 +42,11 @@
 		6BDDF2ECB4EB3465AC11E730 /* Pods-ne-ios-sdk-samples_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ne-ios-sdk-samples_Example.debug.xcconfig"; path = "Target Support Files/Pods-ne-ios-sdk-samples_Example/Pods-ne-ios-sdk-samples_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		79A87D310FE0F8C52E9359DD /* Pods-ne-ios-sdk-samples_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ne-ios-sdk-samples_Tests.release.xcconfig"; path = "Target Support Files/Pods-ne-ios-sdk-samples_Tests/Pods-ne-ios-sdk-samples_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		808CE9C439EF0E29840B86F1 /* Pods_ne_ios_sdk_samples_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ne_ios_sdk_samples_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACD6FC3C2D27DBF8A0AD94A1 /* ne-ios-sdk-samples.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = "ne-ios-sdk-samples.podspec"; path = "../ne-ios-sdk-samples.podspec"; sourceTree = "<group>"; };
+		ACD6FC3C2D27DBF8A0AD94A1 /* ne-ios-sdk-samples.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "ne-ios-sdk-samples.podspec"; path = "../ne-ios-sdk-samples.podspec"; sourceTree = "<group>"; };
 		AEB5E470FAC8BFAAA0BAB4B8 /* Pods-ne-ios-sdk-samples_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ne-ios-sdk-samples_Example.release.xcconfig"; path = "Target Support Files/Pods-ne-ios-sdk-samples_Example/Pods-ne-ios-sdk-samples_Example.release.xcconfig"; sourceTree = "<group>"; };
-		BC3B3B3C12A0EA2D7AA78C71 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BC3B3B3C12A0EA2D7AA78C71 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C9E37ABB7E61D3EBBF2CD874 /* Pods-ne-ios-sdk-samples_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ne-ios-sdk-samples_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ne-ios-sdk-samples_Tests/Pods-ne-ios-sdk-samples_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		FE043CD9D734DD83B634464D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		FE043CD9D734DD83B634464D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,6 @@
 				C9E37ABB7E61D3EBBF2CD874 /* Pods-ne-ios-sdk-samples_Tests.debug.xcconfig */,
 				79A87D310FE0F8C52E9359DD /* Pods-ne-ios-sdk-samples_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -228,6 +227,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -310,11 +310,11 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ne-ios-sdk-samples_Example/Pods-ne-ios-sdk-samples_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ne-ios-sdk-samples/ne_ios_sdk_samples.framework",
+				"${PODS_ROOT}/../../ne-ios-sdk-samples/StepRule.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ne_ios_sdk_samples.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StepRule.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -498,6 +498,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ne-ios-sdk-samples/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -513,6 +514,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ne-ios-sdk-samples/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";

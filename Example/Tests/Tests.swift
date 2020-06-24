@@ -1,5 +1,4 @@
 import XCTest
-import ne-ios-sdk-samples
 
 class Tests: XCTestCase {
     
